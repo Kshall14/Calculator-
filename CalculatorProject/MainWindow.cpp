@@ -1,0 +1,7 @@
+#include "MainWindow.h"
+
+wxBegin
+
+
+
+
