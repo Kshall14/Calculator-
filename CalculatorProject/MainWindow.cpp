@@ -1,11 +1,16 @@
 #include "MainWindow.h"
+
+wxBEGIN_EVENT_TABLE(MainWindow, wxFrame)
+EVT_BUTTON(10001, OnButtonClick)
+wxEND_EVENT_TABLE()
 MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(200, 200), wxSize(1000, 1000))
 {
+
 	//output box
 	textBox = new wxTextCtrl(this, wxID_ANY, "Output", wxPoint(15, 400), wxSize(800, 100));
 	
 	//Number Buttons
-	btn = new wxButton(this, wxID_ANY, "1", wxPoint(15, 15), wxSize(100, 100));
+	btn = new wxButton(this, 10001, "1", wxPoint(15, 15), wxSize(100, 100));
 	btn1 = new wxButton(this, wxID_ANY, "2", wxPoint(100, 15), wxSize(100, 100));
 	btn2 = new wxButton(this, wxID_ANY, "3", wxPoint(185, 15), wxSize(100, 100));
 	btn3 = new wxButton(this, wxID_ANY, "4", wxPoint(15, 100), wxSize(100, 100));
@@ -25,3 +30,12 @@ MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(200,
 	btn15 = new wxButton(this, wxID_ANY, "Execute", wxPoint(360, 185), wxSize(85, 100));
 	
 };
+MainWindow::~MainWindow()
+{
+
+}
+void MainWindow::OnButtonClick(wxCommandEvent& evt)
+{
+
+	evt.Skip();
+}
