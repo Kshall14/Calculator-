@@ -21,6 +21,7 @@ public:
 	wxButton* btn13 = nullptr;
 	wxButton* btn14 = nullptr;
 	wxButton* btn15 = nullptr;
+	wxButton* btn26 = nullptr;
 public:
 
 	MainWindow();

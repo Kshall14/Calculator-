@@ -20,6 +20,7 @@ MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(200,
 	btn7 = new wxButton(this, wxID_ANY, "8", wxPoint(100, 185), wxSize(100, 100));
 	btn8 = new wxButton(this, wxID_ANY, "9", wxPoint(185, 185), wxSize(100, 100));
 	btn9 = new wxButton(this, wxID_ANY, "0", wxPoint(115, 275), wxSize(85, 100));
+	btn26 = new wxButton(this, wxID_ANY, "0", wxPoint(500, 275), wxSize(85, 100));
 
 	//Function Buttons
 	btn10 = new wxButton(this, wxID_ANY, "+", wxPoint(280, 15), wxSize(85, 100));
