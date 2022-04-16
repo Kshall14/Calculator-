@@ -3,7 +3,7 @@
 
 class MainWindow : public wxFrame
 {
-private:
+public:
 	wxTextCtrl* textBox = nullptr;
 	wxButton* btn = nullptr;
 	wxButton* btn1 = nullptr;
@@ -21,7 +21,14 @@ private:
 	wxButton* btn13 = nullptr;
 	wxButton* btn14 = nullptr;
 	wxButton* btn15 = nullptr;
+	wxButton* btn26 = nullptr;
 public:
+
 	MainWindow();
+	~MainWindow();
+	
+	void OnButtonClick(wxCommandEvent &evt);
+	
+	wxDECLARE_EVENT_TABLE();
 };
 
