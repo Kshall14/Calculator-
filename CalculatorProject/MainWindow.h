@@ -21,7 +21,13 @@ public:
 	wxButton* btn13 = nullptr;
 	wxButton* btn14 = nullptr;
 	wxButton* btn15 = nullptr;
-	wxButton* btn26 = nullptr;
+	wxButton* btn16 = nullptr;
+	wxButton* btn17 = nullptr;
+	wxButton* btn18 = nullptr;
+	wxButton* btn19 = nullptr;
+
+
+	std::string str = "";
 public:
 
 	MainWindow();
