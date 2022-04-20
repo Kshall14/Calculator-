@@ -32,9 +32,9 @@ public:
 
 	MainWindow();
 	~MainWindow();
-	
-	void OnButtonClick(wxCommandEvent &evt);
-	
+
+	void OnButtonClick(wxCommandEvent& evt);
+
 	wxDECLARE_EVENT_TABLE();
-}
+};
 

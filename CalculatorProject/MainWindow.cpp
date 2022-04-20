@@ -2,6 +2,7 @@
 #include <string>;
 
 wxBEGIN_EVENT_TABLE(MainWindow, wxFrame)
+
 EVT_BUTTON(10001, OnButtonClick)
 EVT_BUTTON(10002, OnButtonClick)
 EVT_BUTTON(10003, OnButtonClick)
