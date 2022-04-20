@@ -1,5 +1,5 @@
 #include "MainWindow.h"
-#include <string>
+#include <string>;
 
 wxBEGIN_EVENT_TABLE(MainWindow, wxFrame)
 EVT_BUTTON(10001, OnButtonClick)
@@ -24,9 +24,9 @@ EVT_BUTTON(10019, OnButtonClick)
 //EVT_BUTTON(10016, OnButtonClick)
 
 wxEND_EVENT_TABLE()
+
 MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(200, 200), wxSize(1000, 1000))
 {
-
 	//output box
 	textBox = new wxTextCtrl(this, wxID_ANY, "Calculator", wxPoint(15, 400), wxSize(800, 100));
 	

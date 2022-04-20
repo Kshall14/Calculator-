@@ -2,8 +2,8 @@
 #include "MainWindow.h"
 
 wxIMPLEMENT_APP(App);
-//wxDELETE_EVENT_TABLE();
-//wxDECLARE_EVENT_TABLE();
+wxDELETE_EVENT_TABLE();
+wxDECLARE_EVENT_TABLE();
 
 App::App() {
 
