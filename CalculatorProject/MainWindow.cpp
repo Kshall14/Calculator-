@@ -1,5 +1,6 @@
 #include "MainWindow.h"
-#include <string>;
+#include <string>
+#include "ButtonFactory.h"
 
 wxBEGIN_EVENT_TABLE(MainWindow, wxFrame)
 
@@ -24,36 +25,50 @@ EVT_BUTTON(10018, OnButtonClick)
 EVT_BUTTON(10019, OnButtonClick)
 //EVT_BUTTON(10016, OnButtonClick)
 
+
 wxEND_EVENT_TABLE()
 
-MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(200, 200), wxSize(1000, 1000))
+MainWindow::MainWindow() : wxFrame(nullptr, 100, "Calculator", wxPoint(200, 200), wxSize(1000, 1000))
 {
 	//output box
-	textBox = new wxTextCtrl(this, wxID_ANY, "Calculator", wxPoint(15, 400), wxSize(800, 100));
+	textBox = new wxTextCtrl(this, wxID_ANY, "Calculator", wxPoint(15, 400), wxSize(950, 950));
 	
-	//Number Buttons
-	btn = new wxButton(this, 10001, "1", wxPoint(15, 15), wxSize(100, 100));
-	btn1 = new wxButton(this, 10002, "2", wxPoint(100, 15), wxSize(100, 100));
-	btn2 = new wxButton(this, 10003, "3", wxPoint(185, 15), wxSize(100, 100));
-	btn3 = new wxButton(this, 10004, "4", wxPoint(15, 100), wxSize(100, 100));
-	btn4 = new wxButton(this, 10005, "5", wxPoint(100, 100), wxSize(100, 100));
-	btn5 = new wxButton(this, 10006, "6", wxPoint(185, 100), wxSize(100, 100));
-	btn6 = new wxButton(this, 10007, "7", wxPoint(15, 185), wxSize(100, 100));
-	btn7 = new wxButton(this, 10008, "8", wxPoint(100, 185), wxSize(100, 100));
-	btn8 = new wxButton(this, 10009, "9", wxPoint(185, 185), wxSize(100, 100));
-	btn9 = new wxButton(this, 10010, "0", wxPoint(115, 275), wxSize(85, 100));
-	//btn26 = new wxButton(this, 10010, "0", wxPoint(500, 275), wxSize(85, 100));*/************************************SkipNumbering******************
+	//wxPanel* pan1 = new wxPanel(this, 100, wxPoint(15,20), wxSize(900,900));
 
-	//Function Buttons
-	btn10 = new wxButton(this, 10011, "+", wxPoint(280, 15), wxSize(85, 100));
-	btn11 = new wxButton(this, 10012, "-", wxPoint(280, 15), wxSize(85, 100));
-	btn12 = new wxButton(this, 10013, "*", wxPoint(360, 15), wxSize(85, 100));
-	btn13 = new wxButton(this, 10014, "/", wxPoint(280, 100), wxSize(85, 100));
-	btn14 = new wxButton(this, 10015, "-Neg", wxPoint(360, 100), wxSize(85, 100));
-	btn15 = new wxButton(this, 10017, "Execute", wxPoint(360, 185), wxSize(85, 100));
-	btn16 = new wxButton(this, 10018, "Mod", wxPoint(445, 15), wxSize(85, 100));
-	btn17 = new wxButton(this, 10019, "Hex", wxPoint(445, 100), wxSize(85, 100));
-	btn18 = new wxButton(this, 10020, "0.0", wxPoint(445, 185), wxSize(85, 100));
+	wxPanel pan1 = new wxPanel(this, 100, wxPoint(15, 20), wxSize(900, 900));
+	
+	//MainWindow frame = MainWindow* this;
+	//MainWindow frame = this->~MainWindow;
+	//
+	///*btn = ButtonFactory.CreateAddButton1();*/
+	//wxFrame frame = this->~MainWindow;
+
+	ButtonFactory factory;
+	std::vector<wxButton*> buttons = factory.MakeButtons();  
+	
+
+	//btn = new wxButton(panel, 10001, "1", wxPoint(15, 15), wxSize(100, 100));
+	//btn1 = new wxButton(panel, 10002, "2", wxPoint(100, 15), wxSize(100, 100));
+	//btn2 = new wxButton(panel, 10003, "3", wxPoint(185, 15), wxSize(100, 100));
+	//btn3 = new wxButton(panel, 10004, "4", wxPoint(15, 100), wxSize(100, 100));
+	//btn4 = new wxButton(panel, 10005, "5", wxPoint(100, 100), wxSize(100, 100));
+	//btn5 = new wxButton(panel, 10006, "6", wxPoint(185, 100), wxSize(100, 100));
+	//btn6 = new wxButton(panel, 10007, "7", wxPoint(15, 185), wxSize(100, 100));
+	//btn7 = new wxButton(panel, 10008, "8", wxPoint(100, 185), wxSize(100, 100));
+	//btn8 = new wxButton(panel, 10009, "9", wxPoint(185, 185), wxSize(100, 100));
+	//btn9 = new wxButton(panel, 10010, "0", wxPoint(115, 275), wxSize(85, 100));
+	////btn26 = new wxButton(panel, 10010, "0", wxPoint(500, 275), wxSize(85, 100));*/************************************SkipNumbering******************
+
+	////Function Buttons
+	//btn10 = new wxButton(panel, 10011, "+", wxPoint(280, 15), wxSize(85, 100));
+	//btn11 = new wxButton(panel, 10012, "-", wxPoint(280, 15), wxSize(85, 100));
+	//btn12 = new wxButton(panel, 10013, "*", wxPoint(360, 15), wxSize(85, 100));
+	//btn13 = new wxButton(panel, 10014, "/", wxPoint(280, 100), wxSize(85, 100));
+	//btn14 = new wxButton(panel, 10015, "-Neg", wxPoint(360, 100), wxSize(85, 100));
+	//btn15 = new wxButton(panel, 10017, "Execute", wxPoint(360, 185), wxSize(85, 100));
+	//btn16 = new wxButton(panel, 10018, "Mod", wxPoint(445, 15), wxSize(85, 100));
+	//btn17 = new wxButton(panel, 10019, "Hex", wxPoint(445, 100), wxSize(85, 100));
+	//btn18 = new wxButton(panel, 10020, "0.0", wxPoint(445, 185), wxSize(85, 100));
 	//btn19 = new wxButton(this, 10021, "Execute", wxPoint(445, 270), wxSize(85, 100));
 	
 	std::string head = "  ";

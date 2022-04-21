@@ -5,6 +5,7 @@ class MainWindow : public wxFrame
 {
 public:
 	wxTextCtrl* textBox = nullptr;
+	wxButton* Button = nullptr;
 	wxButton* btn = nullptr;
 	wxButton* btn1 = nullptr;
 	wxButton* btn2 = nullptr;
@@ -26,7 +27,7 @@ public:
 	wxButton* btn18 = nullptr;
 	wxButton* btn19 = nullptr;
 
-
+	wxPanel pan1;
 	std::string str = "";
 public:
 
